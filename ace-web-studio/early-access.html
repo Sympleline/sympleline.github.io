@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Web Studio | Early Access Founder's Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #fff4ed 0%, #ffffff 50%);
+        }
+        .scarcity-bar {
+            background: linear-gradient(90deg, #ea580c 0%, #f97316 75%, #e2e8f0 75%, #e2e8f0 100%);
+        }
+        .founder-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .founder-card:hover {
+            border-color: #f97316;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .live-indicator { animation: pulse-soft 2s infinite; }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Top Urgency Banner -->
+    <div class="bg-orange-600 text-white py-2 px-4 text-center text-sm font-medium tracking-wide">
+        FOUNDER'S EDITION: ONLY 124 OF 500 LIFETIME SPOTS REMAINING
+    </div>
+
+    <!-- Navigation -->
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-[2px] bg-black"></div>
+            <span class="text-xl font-bold tracking-tighter uppercase">ACE WEB STUDIO</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#features" class="text-sm font-medium text-slate-500 hover:text-black">Features</a>
+            <a href="#pricing" class="px-5 py-2 bg-black text-white text-sm rounded-full hover:bg-slate-800 transition-all">Secure My Spot</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient pt-20 pb-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-bold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-orange-500 live-indicator"></span>
+                    EARLY ACCESS IS LIVE
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                    Design visually. <br/>
+                    <span class="text-orange-600">Ship instantly.</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                    Stop fighting boilerplate. Ace Web Studio lets you visually build components that sync directly to your React, Svelte, or JSMO project files in real-time.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="#pricing" class="px-8 py-4 bg-orange-600 text-white rounded-lg font-bold text-center hover:bg-orange-700 hover:-translate-y-1 transition-all shadow-lg shadow-orange-200">
+                        Get Lifetime Access — $100
+                    </a>
+                    <div class="flex items-center gap-3 px-4 py-2 text-sm text-slate-500">
+                        <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        One-time payment. No subscription.
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 italic">
+                    "I built Ace because I was tired of switching between my browser and IDE 1,000 times a day. It’s the tool I always wanted as a solo dev." — Founder
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Product Demo Placeholder -->
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-2xl">
+                    <div class="rounded-xl overflow-hidden bg-slate-900 aspect-video flex items-center justify-center text-slate-500 font-mono text-sm relative">
+                         <!-- Placeholder for the GIF/Demo -->
+                         <div class="text-center p-8">
+                            [ SHORT GIF DEMO: Shows dragging a component in Ace and the code automatically updating in VS Code ]
+                         </div>
+                         <div class="absolute bottom-4 left-4 right-4 h-1 scarcity-bar rounded-full"></div>
+                    </div>
+                </div>
+                <!-- Scarcity Badge -->
+                <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-orange-100 max-w-[200px]">
+                    <div class="text-3xl font-bold text-orange-600">376/500</div>
+                    <div class="text-xs uppercase tracking-widest font-bold text-slate-400 mt-1">Licenses Claimed</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problems/Features -->
+    <section id="features" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <h2 class="text-3xl font-bold mb-4">Built for the modern workflow</h2>
+                <p class="text-slate-500">Ace Web Studio isn't another "no-code" toy. It's a visual power-tool for people who actually write code.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Zero-Boilerplate Prototyping</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">Draft UI visually and export perfect React, Svelte, or JSMO code. No more manual <code>&lt;div&gt;</code> nesting by hand.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Reusable Component Library</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">Save your designed components to a personal library. Drag them into any new project instantly.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Theme Engine</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">Build full WordPress and Shopify themes without touching a single line of backend PHP or Liquid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="founder-card bg-white p-8 md:p-12 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-orange-600 text-white px-6 py-2 rounded-bl-2xl font-bold text-sm">
+                    500 SPOTS ONLY
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-3xl font-bold mb-2">The Founder's Edition</h3>
+                    <p class="text-slate-500">A one-time investment to fuel the future of Ace Web Studio.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <div class="text-6xl font-bold mb-2">$100</div>
+                        <div class="text-slate-400 font-medium mb-8">One-time payment. Lifetime access.</div>
+                        
+                        <a href="javascript:void(0)" class="block w-full py-4 bg-black text-white text-center rounded-xl font-bold hover:bg-slate-800 transition-all mb-4">
+                            Claim My Founder's License
+                        </a>
+                        <p class="text-xs text-center text-slate-400">
+                            Once these 500 licenses are gone, Ace will move to a $29/mo subscription model.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="font-bold text-sm uppercase tracking-widest text-slate-400">What's Included:</div>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 text-sm">
+                                <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Lifetime individual Pro access</span>
+                            </li>
+                            <li class="flex gap-3 text-sm">
+                                <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Private "Founders" Discord access</span>
+                            </li>
+                            <li class="flex gap-3 text-sm">
+                                <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Direct feature voting & roadmap input</span>
+                            </li>
+                            <li class="flex gap-3 text-sm">
+                                <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Weekly dev reports & beta access</span>
+                            </li>
+                            <li class="flex gap-3 text-sm">
+                                <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Priority 1-on-1 bug fix support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h4 class="font-bold text-xl mb-4">Why I'm doing this</h4>
+                <p class="text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                    I'm building Ace Web Studio as an independent developer. I don't want VC funding—I want to be accountable to you, the user. This $50k round will provide the runway to hire our first support engineer and move Ace into its stable v1.0 release. By joining now, you aren't just a customer; you're the foundation of this tool.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-slate-100 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="w-6 h-[2px] bg-black"></div>
+                <span class="font-bold">ACE WEB STUDIO</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-8">Part of the Sympleline Ecosystem.</p>
+            <div class="flex justify-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-black">Twitter</a>
+                <a href="#" class="hover:text-black">Discord</a>
+                <a href="#" class="hover:text-black">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
